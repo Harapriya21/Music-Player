@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Custom Music Player</title>
+  <link rel="stylesheet" href="player.css"/>
+</head>
+<body>
+  <div class="player">
+    <h2>Music Player</h2>
+    <div class="current-song-info">
+      <div class="song-details">
+        <span id="song-title">Song Title</span> - <span id="song-artist">Artist</span>
+      </div>
+      <div class="duration">
+        <span id="current-time">0:00</span> / <span id="total-duration">0:00</span>
+      </div>
+    </div>
+    <div class="progress-container" id="progress-container">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="controls">
+      <button id="prev"><span>&#9664;&#9664;</span></button>
+      <button id="play"><span>&#9654;</span></button>
+      <button id="next"><span>&#9654;&#9654;</span></button>
+    </div>
+    <div class="bottom-controls">
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8"/>
+      <label for="autoplay">
+        <input type="checkbox" id="autoplay"/> Autoplay
+      </label>
+    </div>
+    <ul class="playlist" id="playlist">
+      <!-- Songs will be rendered here -->
+    </ul>
+    <audio id="audio"></audio>
+  </div>
+  <script src="script1.js"></script>
+</body>
+</html>
